@@ -1,10 +1,6 @@
 # buat list
 from copy import deepcopy
 
-
-data = [range(0,10)]
-print(data)
-
 data = list(range(1,9))
 print(data)
 
