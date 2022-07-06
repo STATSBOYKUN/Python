@@ -15,3 +15,10 @@ format_lain = f"octal : {oct(angka)}"
 print(format_lain)
 format_lain = f"hex : {hex(angka)}"
 print(format_lain)
+
+#format multiline
+format_lain  = f"""
+biner : {bin(angka)}
+octal : {oct(angka)}
+hex   : {hex(angka)}"""
+print(format_lain)
