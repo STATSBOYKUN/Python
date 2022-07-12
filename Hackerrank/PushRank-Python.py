@@ -28,4 +28,17 @@ if __name__ == '__main__':
     
     #arithmetic
     print("{}\n{}\n{}").format(a+b, a-b, a*b)
+
+#Python: Division
+from __future__ import division
+
+if __name__ == '__main__':
+    a = int(raw_input())
+    b = int(raw_input())
+    print("{}\n{}").format(a//b, a/b)
     
+#Loops
+if __name__ == '__main__':
+    n = int(raw_input())
+    for i in range(n):
+        print(i**2)
