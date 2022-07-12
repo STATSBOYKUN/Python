@@ -1,3 +1,4 @@
-a = 10
+n = 5
 
-print(float(a))
+x = n in range(2,6)
+print(x)
