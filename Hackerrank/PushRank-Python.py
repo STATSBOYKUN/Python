@@ -12,7 +12,7 @@ import re
 import sys
 
 if __name__ == '__main__':
-    n = int(raw_input().strip())
+    n = int(input().strip())
     if (n%2) == 0:
         if (n > 20) or (n in range(2,6)):
             print("Not Weird")
@@ -23,8 +23,8 @@ if __name__ == '__main__':
 
 #Arithmetic Operators
 if __name__ == '__main__':
-    a = int(raw_input())
-    b = int(raw_input())
+    a = int(input())
+    b = int(input())
     
     #arithmetic
     print("{}\n{}\n{}").format(a+b, a-b, a*b)
@@ -33,13 +33,13 @@ if __name__ == '__main__':
 from __future__ import division
 
 if __name__ == '__main__':
-    a = int(raw_input())
-    b = int(raw_input())
+    a = int(input())
+    b = int(input())
     print("{}\n{}").format(a//b, a/b)
     
 #Loops
 if __name__ == '__main__':
-    n = int(raw_input())
+    n = int(input())
     for i in range(n):
         print(i**2)
 
@@ -59,5 +59,10 @@ def is_leap(year):
         
     return leap
 
-year = int(raw_input())
+year = int(input())
 print is_leap(year)
+
+#Print Function
+if __name__ == '__main__':
+    n = int(input())
+    print("".join(str(i) for i in range(1,n+1)))
