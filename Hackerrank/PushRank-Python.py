@@ -42,3 +42,15 @@ if __name__ == '__main__':
     n = int(raw_input())
     for i in range(n):
         print(i**2)
+
+# Write a function
+def is_leap(year):
+    leap = False
+    
+    if year%4 == 0:
+        leap = True
+    
+    return leap
+
+year = int(raw_input())
+print is_leap(year)
