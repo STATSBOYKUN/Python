@@ -20,4 +20,12 @@ if __name__ == '__main__':
             print("Weird")
     else:
         print("Weird") 
+
+#Arithmetic Operators
+if __name__ == '__main__':
+    a = int(raw_input())
+    b = int(raw_input())
+    
+    #arithmetic
+    print("{}\n{}\n{}").format(a+b, a-b, a*b)
     
