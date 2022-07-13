@@ -118,3 +118,23 @@ if __name__ == '__main__':
     n = int(input())
     
     print([[a,b,c] for a in range(0,x+1) for b in range(0,y+1) for c in range(0,z+1) if (a+b+c) != n])
+
+# Nested Lists
+data_temp = []
+second_lowest_names = []
+scores = set()
+
+for _ in range(int(input())):
+    name = input()
+    score = float(input())
+    data_temp.append([name, score])
+    scores.add(score)
+        
+second_lowest = sorted(scores)[1]
+
+for name, score in data_temp:
+    if score == second_lowest:
+        second_lowest_names.append(name)
+
+for name in sorted(second_lowest_names):
+    print(name, end='\n')
