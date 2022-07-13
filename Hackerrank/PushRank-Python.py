@@ -138,3 +138,16 @@ for name, score in data_temp:
 
 for name in sorted(second_lowest_names):
     print(name, end='\n')
+
+# Finding the percentage
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    
+    score_temp = student_marks[query_name]
+    print("{0:.2f}".format((sum(score_temp)/len(score_temp))))
