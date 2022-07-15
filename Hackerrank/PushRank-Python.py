@@ -276,3 +276,13 @@ sub_string = input().strip()
     
 count = count_substring(string, sub_string)
 print(count)
+
+# String Validators
+s = input()
+
+print(any(i.isalnum()  for i in s))
+print(any(i.isalpha() for i in s))
+print(any(i.isdigit() for i in s))
+print(any(i.islower() for i in s))
+print(any(i.isupper() for i in s))
+
