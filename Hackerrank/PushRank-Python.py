@@ -217,3 +217,18 @@ for i in range(len(num)):
    
 tuple_temp = tuple(num)
 print(hash(tuple_temp))
+
+# sWAP cASE
+def swap_case(s):
+   string_temp = ""
+   for i in s:
+      if i.islower() == True:
+         string_temp += i.upper()
+      else:
+         string_temp += i.lower()
+         
+   return string_temp
+
+s = input()
+result = swap_case(s)
+print(result)
