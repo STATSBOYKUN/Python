@@ -208,3 +208,12 @@ for _ in range(N):
       arr_temp.sort()
    elif str(command_temp[0]) == argument_temp[6]:
       print(arr_temp)
+
+# Tuples
+N = input()
+num = input().split()
+for i in range(len(num)):
+   num[i] = int(num[i])
+   
+tuple_temp = tuple(num)
+print(hash(tuple_temp))
