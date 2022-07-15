@@ -232,3 +232,12 @@ def swap_case(s):
 s = input()
 result = swap_case(s)
 print(result)
+
+# String Split and Join
+def split_and_join(line):
+   word_temp = line.split(" ")
+   return "-".join(word_temp)
+
+line = input()
+result = split_and_join(line)
+print(result)

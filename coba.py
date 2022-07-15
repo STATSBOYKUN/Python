@@ -1,13 +1,7 @@
-def swap_case(s):
-   string_temp = ""
-   for i in s:
-      if i.islower() == True:
-         string_temp += i.upper()
-      else:
-         string_temp += i.lower()
-         
-   return string_temp
+def split_and_join(line):
+   word_temp = line.split(" ")
+   return "-".join(word_temp)
 
-s = input()
-result = swap_case(s)
+line = input()
+result = split_and_join(line)
 print(result)
