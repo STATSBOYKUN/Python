@@ -151,3 +151,38 @@ if __name__ == '__main__':
     
     score_temp = student_marks[query_name]
     print("{0:.2f}".format((sum(score_temp)/len(score_temp))))
+
+# itertools.combinations_with_replacement()
+from itertools import combinations_with_replacement
+
+str_temp = list(input().split())
+list_temp = list(combinations_with_replacement(sorted(str_temp[0]),int(str_temp[1])))
+
+for i in list_temp:
+   print("".join(i), end="\n") 
+
+
+# Compress the String!
+from itertools import groupby
+
+int_temp = input()
+list_temp = [list(g) for k, g in groupby(int_temp)]
+
+for i in list_temp:
+   print("("+str(len(i))+", "+str(i[0])+")", end=" ")
+
+# Iterables and Iterators
+from itertools import combinations
+
+n = input()
+word_temp = input().split()
+r = int(input())
+
+list_temp = list(combinations(''.join(word_temp),r))
+
+count_word = 0
+for i in list_temp:
+   if 'a' in i:
+      count_word += 1
+
+print("{0:.3f}".format(count_word/len(list_temp)))

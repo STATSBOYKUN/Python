@@ -1,23 +1,15 @@
-i = 4
-d = 4.0
-s = 'HackerRank '
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import combinations
 
-# Declare second integer, double, and String variables.
-i = 4
-d = 4.0
-s = 'HackerRank '
+n = input()
+word_temp = input().split()
+r = int(input())
 
-# Read and save an integer, double, and String to your variables.
-i2 = int(input())
-d2 = float(input())
-s2 = str(input())
+list_temp = list(combinations(''.join(word_temp),r))
 
-# Print the sum of both integer variables on a new line.
-print(i+i2)
+count_word = 0
+for i in list_temp:
+   if 'a' in i:
+      count_word += 1
 
-# Print the sum of the double variables on a new line.
-print(d+d2)
-
-# Concatenate and print the String variables on a new line
-# The 's' variable above should be printed first.
-print(str(s)+str(s2))
+print("{0:.3f}".format(count_word/len(list_temp)))
