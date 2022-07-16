@@ -1,10 +1,11 @@
-import string
+def solve(s):
+    s_temp = s.split(" ")
+    s_capitalize = ""
+    for i in range(len(s_temp)):
+        s_capitalize += s_temp[int(i)].capitalize()
+        s_capitalize += " "
+    return s_capitalize
 
-def print_rangoli(size):
-    alpha = string.ascii_lowercase
-
-    L = []
-    for i in range(size):
-        s = "-".join(alpha[i:size])
-        L.append((s[::-1]+s[1:]).center(4*size-3, "-"))
-    print('\n'.join(L[:0:-1]+L))
+s = input()
+result = solve(s)
+print(result)
