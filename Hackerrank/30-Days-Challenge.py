@@ -105,4 +105,4 @@ for i in range(0, t):
 # Day 5: Loops
 n = int(input().strip())
     for i in range(1, 11):
-        print("2 x {} = {}".format(i, 2*i))
+        print("{} x {} = {}".format(n,i, n*i))
