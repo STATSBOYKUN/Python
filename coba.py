@@ -1,11 +1,11 @@
-def solve(s):
-    s_temp = s.split(" ")
-    s_capitalize = ""
-    for i in range(len(s_temp)):
-        s_capitalize += s_temp[int(i)].capitalize()
-        s_capitalize += " "
-    return s_capitalize
+n = input()
 
-s = input()
-result = solve(s)
-print(result)
+for _ in range(int(n)):
+    word_temp = str(input())
+    word1, word2 = "", ""
+    for i in range(len(word_temp)):
+        if i%2 == 0:
+            word1 += (word_temp[i])
+        else:
+            word2 += (word_temp[i])
+    print(word1+" "+word2)
