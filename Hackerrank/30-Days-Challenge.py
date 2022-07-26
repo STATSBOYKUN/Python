@@ -119,3 +119,11 @@ for _ in range(int(n)):
         else:
             word2 += (word_temp[i])
     print(word1+" "+word2)
+
+# Day 7: Arrays
+n = int(input().strip())
+
+arr = list(map(int, input().rstrip().split()))
+arr.reverse()
+for i in arr:
+    print(i, end=" ")
