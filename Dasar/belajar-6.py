@@ -22,7 +22,7 @@ data_dictionary = {
    5 : data_sets
 }
 print(data_dictionary[4])
-print(data_dictionary.get(6,"Nda ada boyy"))
+print(data_dictionary.get(6))
 
 #operasi dictionary
 data_dictionary[1] = 5
@@ -42,7 +42,6 @@ for key in data_dictionary.keys():
 for item in data_dictionary.items():
    print(item)
 
-os.system("cls")
 #nested dictionary
 data_dictionary2 = {
    1 : "Umar",

@@ -1,11 +1,13 @@
-n = input()
+n = int(input())
+list_temp = [input().split() for i in range(n)]
+dict_temp = {k: v for k,v in list_temp}
 
-for _ in range(int(n)):
-    word_temp = str(input())
-    word1, word2 = "", ""
-    for i in range(len(word_temp)):
-        if i%2 == 0:
-            word1 += (word_temp[i])
+while True:
+    try:
+        name = input()
+        if name in dict_temp:
+            print("{}={}".format(name, dict_temp[name]))
         else:
-            word2 += (word_temp[i])
-    print(word1+" "+word2)
+            print("Not found")
+    except:
+        break
