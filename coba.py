@@ -1,23 +1,28 @@
-class Difference:
-    def __init__(self, a):
-        self.__elements = a
-    
-    def computeDifference(self):
-        self.maximumDifference = 0
-        for i in range(len(self.__elements)):
-            for j in range(len(self.__elements)):
-                if abs(self.__elements[i] - self.__elements[j]) > self.maximumDifference:
-                    self.maximumDifference = abs(self.__elements[i] - self.__elements[j])
-    
-        return self.maximumDifference
-    
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None 
+class Solution: 
+    def display(self,head):
+        current = head
+        while current:
+            print(current.data,end=' ')
+            current = current.next
 
-# End of Difference class
+    def insert(self,head,data): 
+        if head is None:
+            head = Node(data)
+        else:
+            current = head
+            while current.next:
+                current = current.next
+            current.next = Node(data)
+        return head
 
-_ = input()
-a = [int(e) for e in input().split(' ')]
-
-d = Difference(a)
-d.computeDifference()
-
-print(d.maximumDifference)
+mylist= Solution()
+T=int(input())
+head=None
+for i in range(T):
+    data=int(input())
+    head=mylist.insert(head,data)    
+mylist.display(head); 	  
