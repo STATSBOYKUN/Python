@@ -1,22 +1,23 @@
-from abc import ABCMeta, abstractmethod
-class Book(object, metaclass=ABCMeta):
-    def __init__(self,title,author):
-        self.title=title
-        self.author=author   
-    @abstractmethod
-    def display(): pass
+class Difference:
+    def __init__(self, a):
+        self.__elements = a
+    
+    def computeDifference(self):
+        self.maximumDifference = 0
+        for i in range(len(self.__elements)):
+            for j in range(len(self.__elements)):
+                if abs(self.__elements[i] - self.__elements[j]) > self.maximumDifference:
+                    self.maximumDifference = abs(self.__elements[i] - self.__elements[j])
+    
+        return self.maximumDifference
+    
 
-class MyBook(Book):
-    def __init__(self, title, author, price):
-        super().__init__(title, author)
-        self.price = price
-    def display(self):
-        print("Title: {}".format(self.title))
-        print("Author: {}".format(self.author))
-        print("Price: {}".format(self.price))
+# End of Difference class
 
-title=input()
-author=input()
-price=int(input())
-new_novel=MyBook(title,author,price)
-new_novel.display()
+_ = input()
+a = [int(e) for e in input().split(' ')]
+
+d = Difference(a)
+d.computeDifference()
+
+print(d.maximumDifference)
