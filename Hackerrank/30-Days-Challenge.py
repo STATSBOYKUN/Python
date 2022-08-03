@@ -160,3 +160,28 @@ if __name__ == '__main__':
     fptr.write(str(result) + '\n')
 
     fptr.close()
+
+# Day 10: Binary Numbers
+bin_temp = bin(int(input()))
+text_temp = bin_temp[2:]
+list_temp = text_temp.split("0")
+
+print(len(max(list_temp)))
+
+# Day 11: 2D Arrays
+list_temp = []
+for i in range(6):
+    list_temp.append(input().split())
+
+sum_temp = 0
+list_sum = []
+for i in range(4):
+    for j in range(4):
+        sum_temp += (int(list_temp[i][j]) + int(list_temp[i][j+1]) + int(list_temp[i][j+2]))
+        sum_temp += (int(list_temp[i+1][j+1]))
+        sum_temp += (int(list_temp[i+2][j]) + int(list_temp[i+2][j+1]) + int(list_temp[i+2][j+2]))
+        
+        list_sum.append(sum_temp)
+        sum_temp = 0
+
+print(max(list_sum))
