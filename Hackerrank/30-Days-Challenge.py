@@ -224,3 +224,27 @@ scores = list( map(int, input().split()) )
 s = Student(firstName, lastName, idNum, scores)
 s.printPerson()
 print("Grade:", s.calculate())
+
+from abc import ABCMeta, abstractmethod
+class Book(object, metaclass=ABCMeta):
+    def __init__(self,title,author):
+        self.title=title
+        self.author=author   
+    @abstractmethod
+    def display(): pass
+
+# Day 13: Abstract Classes
+class MyBook(Book):
+    def __init__(self, title, author, price):
+        super().__init__(title, author)
+        self.price = price
+    def display(self):
+        print("Title: {}".format(self.title))
+        print("Author: {}".format(self.author))
+        print("Price: {}".format(self.price))
+
+title=input()
+author=input()
+price=int(input())
+new_novel=MyBook(title,author,price)
+new_novel.display()
